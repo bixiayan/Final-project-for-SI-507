@@ -3,7 +3,7 @@ import csv
 import json
 import ast
 
-DBNAME = 'movies.db'
+DBNAME = '../movies.db'
 MOVIECSV = 'IMDB-Movie-Data.csv'
 
 CACHE_FNAME = "imdb.json"

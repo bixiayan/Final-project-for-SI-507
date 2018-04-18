@@ -3,6 +3,10 @@ import secrets
 import requests
 import csv
 
+class Movie:
+    def __init__(self, name, year):
+        self.name = name
+        self.year = year
 
 key = secrets.key
 CACHE_FNAME = 'cache.json'
@@ -63,10 +67,12 @@ def make_one_thousand_movies(csv_file):
             if header:
                 header = False
                 continue
-            movie_name_lists.append(row[1])
+            movie = Movie(row[1], row[6])
+            movie_name_lists.append(movie)
     base_url = "http://www.omdbapi.com/?s="
-    for name in movie_name_lists:
-        url = base_url + name
+    for movie in movie_name_lists:
+        url = base_url + movie.name
+        url += "&y=" + str(movie.year)
         data = make_request_using_cache(url)
 
 

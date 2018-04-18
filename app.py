@@ -8,7 +8,7 @@ DBNAME = 'movies.db'
 
 @app.route('/')
 def home():
-    years=[2007, 2008, 2009, 2012, 2011, 2012, 2013, 2014, 2015, 2016]
+    years=[2006, 2007, 2008, 2009, 2012, 2011, 2012, 2013, 2014, 2015, 2016]
     return render_template('index.html', years=years)
 
 @app.route('/allMovies')

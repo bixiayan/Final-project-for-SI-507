@@ -1,0 +1,16 @@
+
+/* style.css */
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: brown;
+    font-family: fantasy;
+    font-size: 44;
+}
+
+li {
+    color: purple;
+    font-family: monospace;
+}

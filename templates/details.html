@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='style.css') }}"/>
 <a href="{{url_for('home')}}">HOME</a>
 {% for item in result%}
     <p>mdbID: {{item[0]}}</p>

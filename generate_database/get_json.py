@@ -95,10 +95,11 @@ def one_thousand_movies(json_file):
         if 'Search' in value:
             item = value['Search'][0]
             imdb_ids.append(item['imdbID'])
-
+    # print(len(imdb_ids))
     base_url = "http://www.omdbapi.com/?i="
     for id in imdb_ids:
         url = base_url + str(id)
+        # print(url)
         data = make_request_using_cache(url)
 
     
