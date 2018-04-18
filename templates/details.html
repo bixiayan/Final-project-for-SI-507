@@ -1,0 +1,13 @@
+<a href="{{url_for('home')}}">HOME</a>
+{% for item in result%}
+    <p>mdbID: {{item[0]}}</p>
+    <p>Title: {{item[1]}}</p>
+    <p>Year: {{item[2]}}</p>
+    <p>Actors: {{item[3]}}</p>
+    <p>Director: {{item[4]}}</p>
+    <p>Genre: {{item[5]}}</p>
+    <p>Description: {{item[6]}}</p>
+    <p>MataScore: {{item[8]}}</p>
+    <p>imdbRating: {{item[9]}}</p>
+    <p>imdbVotes: {{item[10]}}</p>
+{% endfor %}

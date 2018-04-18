@@ -89,7 +89,7 @@ def init_db(db_name):
                 # imdbID score, ratings, rank
                 statement = '''CREATE TABLE 'Ratings' (
                     'mdbID' TEXT REFERENCES Basics('mdbID'),
-                    'Metascore'  INTEGER NOT NULL,
+                    'MetaScore'  INTEGER NOT NULL,
                     'imdbRating' REAL NOT NULL,
                     'imdbVotes' INTEGER NOT NULL
                     )
@@ -105,7 +105,7 @@ def init_db(db_name):
         print("Created...")
         statement = '''CREATE TABLE 'Ratings' (
             'mdbID' TEXT REFERENCES Basics('mdbID'),
-            'Metascore'  INTEGER NOT NULL,
+            'MetaScore'  INTEGER NOT NULL,
             'imdbRating' REAL NOT NULL,
             'imdbVotes' INTEGER NOT NULL
             )
@@ -155,13 +155,6 @@ def insert_basics(db_name, csv_file, json_file):
     imdb_ids = []
     for key, value in data.items():
         value = ast.literal_eval(value)
-        # print(value["imdbID"])
-        # print(type(value["Title"]))
-        # print(type(value["Year"]))
-        # print(type(value["Actors"]))
-        # print(type(value["Director"]))
-        # print(type(value["Genre"]))
-        # print((value["Plot"]))
         insertion = (value["imdbID"], value["Title"], int(value["Year"][0:4]), value["Actors"], value["Director"], value["Genre"], value["Plot"])
         statement = 'INSERT INTO "Basics" '
         statement += 'VALUES (?, ?, ?, ?, ?, ?, ?) '

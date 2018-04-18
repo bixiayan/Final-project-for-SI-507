@@ -1,0 +1,12 @@
+<a href="{{url_for('home')}}">HOME</a>
+<h2>Highest Score Movie for {{year}}</h2>
+<br>
+<a href="{{url_for('show_details', mdbID=MetaMax[2])}}">{{MetaMax[1]}}</a>
+<p>MetaScore: {{MetaMax[0]}}</p>
+<br>
+<a href="{{url_for('show_details', mdbID=imdbRatingMax[2])}}">{{imdbRatingMax[1]}}</a>
+<p>imdbRating: {{imdbRatingMax[0]}}</p>
+<br>
+<a href="{{url_for('show_details', mdbID=imdbVotesMax[2])}}">{{imdbVotesMax[1]}}</a>
+<p>imdbVotes: {{imdbVotesMax[0]}}</p>
+<br>

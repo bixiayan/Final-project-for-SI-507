@@ -1,0 +1,7 @@
+<a href="{{url_for('home')}}">HOME</a>
+<h2>All {{year}}</h2>
+<ul>
+{% for item in result %}
+<li><a href="{{url_for('show_details', mdbID=item[0])}}">{{item[1]}}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,20 @@
+<h2> Show All Movies</h2>
+<ul>
+{% for year in years %}
+    <li><a href="{{url_for('show_years', year=year)}}">{{year}}</a></li>
+{% endfor %}
+</ul>
+
+<h2> Show Average Score of Each Year</h2>
+<ul>
+{% for year in years %}
+    <li><a href="{{url_for('show_average', year=year)}}">{{year}}</a></li>
+{% endfor %}
+</ul>
+
+<h2> Show Highest Movie of Each Year</h2>
+<ul>
+{% for year in years %}
+    <li><a href="{{url_for('show_highest', year=year)}}">{{year}}</a>
+{% endfor %}
+</ul>
