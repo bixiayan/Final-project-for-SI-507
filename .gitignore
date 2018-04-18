@@ -1,5 +1,5 @@
 generate_database/__pycache__
 generate_database/secrets.py
 generate_database/secrets.pyc
-env
-__pycache__
+/env
+/__pycache__
