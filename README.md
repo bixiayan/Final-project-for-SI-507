@@ -4,7 +4,13 @@
 Data are generated inside the generate_databse folder. Source data include: API Key of omdbapi, IMDB-Movie-Data.csv daownloaded from the website. 
 
 <!-- Any other information needed to run the program (e.g., pointer to getting started info for plotly) -->
-Stay in the directory where app.py exists, run app.py and open  http://localhost:5000/.
+1. Stay in the directory where app.py exists, run app.py and open  http://localhost:5000/.
+2. If you want to generate the json yourself, please go to the generate data folder and create a secretes.py, put '''
+
+key = "XXX"
+
+'''
+as the content, where XXX is the key request from the omdbapi website.
 
 
 <!-- Brief description of how your code is structured, including the names of significant data processing functions (just the 2-3 most important functions--not a complete list) and class definitions. If there are large data structures (e.g., lists, dictionaries) that you create to organize your data for presentation, briefly describe them. -->
@@ -22,7 +28,7 @@ Running instruction:
 1. request_with_csv.py(optional)
     NOTE: be careful running this since it override the cache.json. The newly cache.json will contain 4 piece of weired format html data and I delete it manully.
 2. get_json.py(optional)
-    NOTE: be careful running this since it override the cache.json. The newly cache.json will contain 4 piece of weired format html data and I delete it manully.
+    NOTE: be careful running this since it override the cache.json. The newly cache.json will contain 10 piece of weired format html data and I delete it manully.
 3. constuct_db.py(recommened start directly with this step)
     This contruct the database.
 4. Go to the upper level folder
